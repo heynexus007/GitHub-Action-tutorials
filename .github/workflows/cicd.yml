@@ -15,7 +15,8 @@ on:
 jobs:
   #Job1
   compile:
-    runs-on: ubuntu-latest
+    #Adding my Self-Hosted Runner here..
+    runs-on: self-runner1
 
     steps:
     - uses: actions/checkout@v4
@@ -30,7 +31,8 @@ jobs:
 
   #Job2
   security-check:
-    runs-on: ubuntu-latest
+    #Adding my Self-Hosted Runner here..
+    runs-on: self-runner1
     needs: compile
 
     steps:
