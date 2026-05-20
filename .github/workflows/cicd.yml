@@ -94,10 +94,8 @@ jobs:
       uses: SonarSource/sonarqube-scan-action@v8.1.0 # Ex: v4.1.0 or sha1, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
-    
-    - name: Debug URL
-      run: echo "SONAR_HOST_URL=$SONAR_HOST_URL"
+      #   SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+      # run: echo "SONAR_HOST_URL=$SONAR_HOST_URL"    
 
 
     # Check the Quality Gate status.
