@@ -140,6 +140,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v7
       with:
+        context: .
         push: true
         tags: nexu776/pvt-bank:latest
              
