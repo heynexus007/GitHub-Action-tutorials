@@ -1,13 +1,13 @@
 FROM eclipse-temurin:17-jdk-alpine
-    
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy jar file
+COPY app/*.jar app.jar
+
+# Expose port
 EXPOSE 8080
 
-RUN ls 
-
-ENV APP_HOME /usr/src/app
-
-COPY app/*.jar $APP_HOME/app.jar
-
-WORKDIR $APP_HOME
-
+# Run app
 CMD ["java", "-jar", "app.jar"]
